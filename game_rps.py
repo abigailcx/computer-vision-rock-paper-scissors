@@ -146,12 +146,12 @@ class RPS:
             print(f"\nROUND {self.game_round}: You both chose {computer_choice}.")
             winner = "It's a tie! \n"
             self.game_round += 1
-        elif (computer_choice == "Rock" and user_choice == "Paper") or (computer_choice == "Paper" and user_choice == "Scissors") or (computer_choice == "Scissors" and user_choice == "Rock"):
+        elif (computer_choice == "rock" and user_choice == "paper") or (computer_choice == "paper" and user_choice == "scissors") or (computer_choice == "scissors" and user_choice == "rock"):
             print(f"\nROUND {self.game_round}: You chose {user_choice} and the computer chose {computer_choice}.")
             winner = "Congratulations! You won this round! \n"
             self.user_wins += 1
             self.game_round += 1
-        elif (computer_choice == "Rock" and user_choice == "Scissors") or (computer_choice == "Paper" and user_choice == "Rock") or (computer_choice == "Scissors" and user_choice == "Paper"):
+        elif (computer_choice == "rock" and user_choice == "scissors") or (computer_choice == "paper" and user_choice == "rock") or (computer_choice == "scissors" and user_choice == "paper"):
             print(f"\nROUND {self.game_round}: You chose {user_choice} and the computer chose {computer_choice}.")
             winner = "Oh no! You lost this round. Better luck next time. \n"
             self.computer_wins += 1
