@@ -3,8 +3,6 @@ import random
 categories = ["R", "P", "S"]
 categories_dict = {"R": "ROCK", "P": "PAPER", "S": "SCISSORS"}
 
-# class RPS:
-#     def __init__():
 
 def get_computer_choice():
     computer_choice = random.choice(list(categories_dict))
