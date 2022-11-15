@@ -65,13 +65,12 @@ class RPS:
         with open(label_file) as f:
             reader = csv.reader(f, delimiter=' ')
             label_dict = dict(reader)
-            print(label_dict)
             
             for k, v in label_dict.items():
                 self.moves.append(v)
 
         self.moves = [word.lower() for word in self.moves]
-        print(self.moves)
+        
         return self.moves 
 
 
@@ -131,6 +130,7 @@ class RPS:
 
         keyboard_user_choice = input("What move will you play: Rock, Paper or Scissors?\t")
         keyboard_user_choice = keyboard_user_choice.lower()
+        
         if keyboard_user_choice not in self.moves:
             print("Oops! That is not a recognised move. Your choices are: 'Rock' , 'Paper' or 'Scissors'")
 
@@ -173,6 +173,7 @@ class RPS:
         """
 
         print(f"\nGAME COMPLETE! The computer won {self.computer_wins} of the rounds and you won {self.user_wins} of the rounds.")
+        
         if self.computer_wins < self.user_wins:
             print("CONGRATULATIONS! The overall winner is you! \n")
         elif self.computer_wins > self.user_wins:
